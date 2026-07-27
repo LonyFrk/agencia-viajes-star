@@ -35,7 +35,12 @@ $destinos = [
                         </p>
 
                         <p>
-                            Desde $<?= $destino["precio"] ?>
+                            Desde $<?= number_format(
+                                (float) $destino["precio"],
+                                0,
+                                ",",
+                                "."
+                            ) ?>
                         </p>
                     </div>
                 </article>
